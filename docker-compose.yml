@@ -1,11 +1,11 @@
-version: '3.1'
+version: '16.1'
 
 services:
   db:
-    image: postgres:latest
-    container_name: veterinaria_db
+    image: postgres:16.1
+    container_name: veterinaria
     environment:
-      POSTGRES_USER: tuusuario
+      POSTGRES_USER: Nicolas
       POSTGRES_PASSWORD: Nico0603
       POSTGRES_DB: Veterinaria_db
     ports:
