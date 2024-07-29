@@ -33,6 +33,7 @@ class Mascota:
 
     def __str__(self):
         return f"""
+            ID Cliente: {self._id_cliente}
             Nombre: {self._nombre}
             Tipo: {self._tipo}  
             Raza: {self._raza}
