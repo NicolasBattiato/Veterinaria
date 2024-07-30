@@ -1,5 +1,6 @@
-from Cliente import Cliente
-from Mascota import Mascota
+from app.Cliente import Cliente
+from app.Mascota import Mascota
+
 
 class Veterinaria:
     def __init__(self, nombre, clientes):
@@ -21,7 +22,6 @@ class Veterinaria:
                 {self._cliente["Apellido"]}
                 {self._cliente["DNI"]} 
                 Cliente Registrado Correctamente...""")
-
 
     def agregarMascota(self, dni, Mascota):
         clienteBusqueda = False
@@ -48,7 +48,8 @@ class Veterinaria:
             print("LISTADO DE CLIENTES")
             for cliente in self._clientes:
                 print("-------------------------------------")
-                print(f"-Nombre cliente: {cliente["Nombre"]} | -Apellido: {cliente["Apellido"]} | -Dni: {cliente["DNI"]}")
+                print(
+                    f"-Nombre cliente: {cliente["Nombre"]} | -Apellido: {cliente["Apellido"]} | -Dni: {cliente["DNI"]}")
                 n = 1
                 for mascota in cliente["Mascotas"]:
                     print(f"""
@@ -56,7 +57,7 @@ class Veterinaria:
                     print(f"""
                     Nombre: {mascota["Nombre"]} | Tipo: {mascota["Tipo"]} | Raza: {mascota["Raza"]}""")
                     print("\n")
-                    n+= 1
+                    n += 1
 
 
 if __name__ == "__main__":
@@ -64,11 +65,9 @@ if __name__ == "__main__":
     veterinaria.registrarCliente("Nicolas", "Batti", 2)
     veterinaria.registrarCliente("Gaston", "Batti", 45067457)
     mascota1 = Mascota("Abril", "Perro", "Caniche")
-    mascota2 = Mascota("Uma","Perro","Caniche")
+    mascota2 = Mascota("Uma", "Perro", "Caniche")
     veterinaria.agregarMascota(2, mascota1)
     veterinaria.agregarMascota(2, mascota2)
     veterinaria.listarClientes()
     print("\n")
     print(veterinaria)
-
-

@@ -1,7 +1,7 @@
-from Cliente import Cliente
-from CursorPOOL import *
-from Conexion import *
-from Mascota import Mascota
+from app.Cliente import Cliente
+from app.CursorPOOL import *
+from app.Conexion import *
+from app.Mascota import Mascota
 
 
 class ClientesDAO:

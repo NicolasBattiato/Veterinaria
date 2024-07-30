@@ -1,9 +1,9 @@
+import app
+from app.ClientesDAO import *
+from app.Veterinaria import *
+from app.Cliente import *
+from app.Mascota import *
 
-from ClientesDAO import ClientesDAO
-from Cliente import Cliente
-from Conexion import Conexion
-from Mascota import Mascota
-from Veterinaria import Veterinaria
 
 if __name__ == "__main__":
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     opcion = int(input("Ingrese una opcion del menu(0 o mayor a 9 para salir): "))
 
-    while (opcion >= 9 or opcion != 0):
+    while opcion >= 9 or opcion != 0:
         if opcion == 1:
             nombre = input("Ingrese el Nombre del Cliente: ")
             apellido = input("Ingrese el Apellido del Cliente: ")

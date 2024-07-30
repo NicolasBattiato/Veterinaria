@@ -1,9 +1,6 @@
-
 class Cliente:
 
-
-    def __init__(self,id_cliente=None, nombre= None, apellido= None, dni= None):
-
+    def __init__(self, id_cliente=None, nombre=None, apellido=None, dni=None):
         self._id_cliente = id_cliente
         self._nombre = nombre
         self._apellido = apellido
@@ -43,15 +40,13 @@ class Cliente:
     def dni(self, dni):
         self._dni = dni
 
-
-
-
     def __str__(self):
         return f"""
                 ID: {self._id_cliente}
                 Nombre: {self._nombre}
                 Apellido: {self._apellido}
                 DNI: {self._dni}"""
+
 
 if __name__ == "__main__":
     nombre = input("Ingrese el nombre: ")
@@ -60,11 +55,3 @@ if __name__ == "__main__":
     cliente1 = Cliente(nombre, apellido, dni)
     print("\n")
     print(cliente1)
-
-
-
-
-
-
-
-

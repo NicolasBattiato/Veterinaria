@@ -1,4 +1,4 @@
-from Conexion import Conexion
+from app.Conexion import Conexion
 
 
 class CursorPOOL:

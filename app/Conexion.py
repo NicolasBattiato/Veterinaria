@@ -1,10 +1,9 @@
-
 from psycopg2 import pool
 from psycopg2 import sql
 import sys
 
-class Conexion:
 
+class Conexion:
     _DATABASE = "Veterinaria_db"
     _USERNAME = "postgres"
     _PASSWORD = "Nico0603"
@@ -88,24 +87,5 @@ class Conexion:
                 cls.liberarConexion(conexion)
 
 
-
 if __name__ == "__main__":
     Conexion.createTable()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
