@@ -87,5 +87,5 @@ class Conexion:
                 cls.liberarConexion(conexion)
 
 
-if __name__ == "__main__":
-    Conexion.createTable()
+
+

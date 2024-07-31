@@ -1,4 +1,6 @@
 import app
+from psycopg2 import pool
+from psycopg2 import sql
 from app.ClientesDAO import *
 from app.Veterinaria import *
 from app.Cliente import *
@@ -6,6 +8,7 @@ from app.Mascota import *
 
 
 if __name__ == "__main__":
+    Conexion.createTable()
 
     print("MENU DE OPERACIONES VETERINARIA".center(50, "-"))
     print(f"""
@@ -80,6 +83,9 @@ if __name__ == "__main__":
             mascotas = ClientesDAO.seleccionarMascota()
             for mascota in mascotas:
                 print(f"Mascotas encontradas: {mascota}")
+
+        elif opcion == 9:
+            break
 
         print("MENU DE OPERACIONES VETERINARIA".center(50, "-"))
         print(f"""

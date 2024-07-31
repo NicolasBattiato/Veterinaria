@@ -28,7 +28,7 @@ class ClientesDAO:
             for registro in registros:
                 cliente = Cliente(registro[0], registro[1], registro[2], registro[3])
                 clientesLista.append(cliente)
-                return clientesLista
+            return clientesLista
 
     @classmethod
     def insertarCliente(cls, cliente):
@@ -66,7 +66,7 @@ class ClientesDAO:
             for registro in registros:
                 mascota = Mascota(registro[0], registro[1], registro[2], registro[3], registro[4])
                 listaMascotas.append(mascota)
-                return listaMascotas
+            return listaMascotas
 
     @classmethod
     def insertarMascota(cls, mascota, cliente):
@@ -94,44 +94,7 @@ class ClientesDAO:
 
 
 
-if __name__  == "__main__":
-    #---------------------------------Prueba Cliente----------------------------------------------
-    # INSERT
-    #cliente1 = Cliente(nombre="Nicolas", apellido="Battiato", dni=45065534)
-    #clientesIngresados = ClientesDAO.insertarCliente(cliente1)
-    #print(f"Cliente ingresado: {clientesIngresados}")
 
-
-    # INSERT
-    #cliente2 = Cliente(nombre="Gaston", apellido="Battiato", dni=44661614)
-    #clienteIngresado = ClientesDAO.insertarCliente(cliente2)
-    #print(f"Cliente ingresado: {clienteIngresado}")
-
-    # DELETE
-    #clienteE = Cliente(1)
-    #clienteEliminado = ClientesDAO.eliminarCliente(clienteE)
-    #print(f"Cliente eliminado: {clienteEliminado}")
-
-    # UPDATE
-    #clienteU = Cliente(2, nombre="Nicolas", apellido="Battiato", dni=45065534)
-    #clienteAct = ClientesDAO.actualizarCliente(clienteU)
-    #print(f"Cliente actualizado: {clienteAct}")
-
-    #------------------------------Prueba Mascota--------------------------------------
-
-    #mascota1 = Mascota(nombre="Abril", tipo="Perro", raza="Caniche")
-    #clienteMas1 = Cliente(2)
-    #mascotaInsert = ClientesDAO.insertarMascota(mascota1, clienteMas1)
-    #print(f"Mascota ingresada: {mascotaInsert} al cliente: {clienteMas1}")
-
-    # SELECT
-    clientes = ClientesDAO.seleccionarCliente()
-    for cliente in clientes:
-        print(f"Clientes encontrados: {cliente}")
-
-    mascotas = ClientesDAO.seleccionarMascota()
-    for mascota in mascotas:
-        print(f"Mascotas encontradas: {mascota}")
 
 
 

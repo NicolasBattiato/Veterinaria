@@ -5,13 +5,27 @@ services:
     image: postgres:16.1
     container_name: veterinaria
     environment:
-      POSTGRES_USER: Nicolas
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: Nico0603
       POSTGRES_DB: Veterinaria_db
     ports:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+  app:
+    build: .
+    container_name: veterin
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: veterinaria_db
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: Nico0603
+    ports:
+      - "57070:57070"
+    command: [ "python", "PruebaVet.py" ]
 
 volumes:
   db_data:
