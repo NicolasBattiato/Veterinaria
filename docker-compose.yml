@@ -14,7 +14,7 @@ services:
       - db_data:/var/lib/postgresql/data
   app:
     build: .
-    container_name: veterin
+    container_name: veterin_psql
     depends_on:
       - db
     environment:
