@@ -19,8 +19,8 @@ Este proyecto es una aplicación para la gestión de clientes y mascotas en una 
 
 ## Uso
 ### Ejemplo
----Python
-```
+
+```Python
 def menu():
     print("MENU DE OPERACIONES VETERINARIA".center(50, "-"))
     print(f"""
