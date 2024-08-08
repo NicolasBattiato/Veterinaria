@@ -6,21 +6,18 @@ from app.Veterinaria import *
 from app.Cliente import *
 from app.Mascota import *
 
-
-if __name__ == "__main__":
-    Conexion.createTable()
-
+def menu():
     print("MENU DE OPERACIONES VETERINARIA".center(50, "-"))
     print(f"""
-            1. Insertar CLiente
-            2. Insertar Mascota al Cliente
-            3. Actualizar Cliente
-            4. Actualizar Mascota
-            5. Eliminar Cliente
-            6. Eliminar Mascota
-            7. Listar Clientes
-            8. Listar Mascota
-            9. Salir""")
+                1. Insertar CLiente
+                2. Insertar Mascota al Cliente
+                3. Actualizar Cliente
+                4. Actualizar Mascota
+                5. Eliminar Cliente
+                6. Eliminar Mascota
+                7. Listar Clientes
+                8. Listar Mascota
+                9. Salir""")
 
     opcion = int(input("Ingrese una opcion del menu(0 o mayor a 9 para salir): "))
 
@@ -89,19 +86,25 @@ if __name__ == "__main__":
 
         print("MENU DE OPERACIONES VETERINARIA".center(50, "-"))
         print(f"""
-                    1. Insertar CLiente
-                    2. Insertar Mascota al Cliente
-                    3. Actualizar Cliente
-                    4. Actualizar Mascota
-                    5. Eliminar Cliente
-                    6. Eliminar Mascota
-                    7. Listar Clientes
-                    8. Listar Mascota
-                    9. Salir""")
+                        1. Insertar CLiente
+                        2. Insertar Mascota al Cliente
+                        3. Actualizar Cliente
+                        4. Actualizar Mascota
+                        5. Eliminar Cliente
+                        6. Eliminar Mascota
+                        7. Listar Clientes
+                        8. Listar Mascota
+                        9. Salir""")
 
         opcion = int(input("Ingrese una opcion(0 o <9 para salir): "))
 
     print("El programa termino...")
+
+if __name__ == "__main__":
+    Conexion.createTable()
+    menu()
+
+
 
 
 

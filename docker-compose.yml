@@ -1,4 +1,4 @@
-version: '16.1'
+version: '0.19'
 
 services:
   db:
@@ -9,7 +9,9 @@ services:
       POSTGRES_PASSWORD: Nico0603
       POSTGRES_DB: Veterinaria_db
     ports:
-      - "5432:5432"
+      - "5454:5432"
+    networks:
+      - Veterinaria-net
     volumes:
       - db_data:/var/lib/postgresql/data
   app:
@@ -17,15 +19,22 @@ services:
     container_name: veterin_psql
     depends_on:
       - db
+    links:
+      - db
     environment:
-      DATABASE_HOST: db
-      DATABASE_PORT: 5432
-      DATABASE_NAME: veterinaria_db
-      DATABASE_USER: postgres
-      DATABASE_PASSWORD: Nico0603
-    ports:
-      - "57070:57070"
-    command: [ "python", "PruebaVet.py" ]
+      - DATABASE_HOST= db
+      - DATABASE_PORT= 5454
+      - DATABASE_NAME= veterinaria_db
+      - DATABASE_USER= postgres
+      - DATABASE_PASSWORD= Nico0603
+    networks:
+      - Veterinaria-net
+    volumes:
+      - "C:/Users/Nico/Documentos/VeterinariaProyecto:/app"
+
 
 volumes:
   db_data:
+
+networks:
+  Veterinaria-net:
