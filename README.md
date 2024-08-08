@@ -18,6 +18,7 @@ Este proyecto es una aplicación para la gestión de clientes y mascotas en una 
   - Docker-compose.yml
 
 ## Uso
+El archivo "Prueba.py" contiene un menu desplegable para realizar una operacion. En la carpeta app se encuentran las clases que conforman el programa.
 ### Ejemplo
 
 ```Python
